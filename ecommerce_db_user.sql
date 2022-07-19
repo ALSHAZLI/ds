@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: ecommerce_db
+-- ------------------------------------------------------
+-- Server version	8.0.26
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(255) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `is_admin` int DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `fullname_UNIQUE` (`fullname`),
+  UNIQUE KEY `phone_UNIQUE` (`phone`),
+  UNIQUE KEY `password_UNIQUE` (`password`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'cr3337','0999212345','asdf',0,'2022-03-18','2022-03-18'),(3,'van','0923230851','$2a$10$BUCH31w4ND8PWv2224DLuuhq61AeKPYsdLSH5wQMot2aZgSf.Pvfi',0,'2022-03-18','2022-03-18'),(4,'van2','0923230841','$2a$10$TE038mPqpriyDgc51xhC8eZHjT1RZXgHC8wxsnyJyWNCeHMDS1i.y',0,'2022-04-18','2022-04-18'),(5,'www','0921130841','$2a$10$j0PW0.Qm8lKQm7ojl7H3Ue4AZQlkrSqa15h9CZkaJ81R5zHuNOz1e',0,'2022-05-18','2022-05-18'),(6,'mackintosh','0111130841','$2a$10$CdT.5sxV7a61WGX2lZxA4.s0XWOjm84z9cCoA3NCuY63BP./OMGA.',0,'2022-05-18','2022-05-18'),(7,'olveadmin','0923990851','$2a$10$x5dFoE69Jud8LsuF.hWbTOAntq0tNResbKhWo2YTmarJN40CxAfoi',1,'2022-05-18','2022-05-18'),(8,'wewe','0993670349','$2a$10$uVmbJj0v8QqTF2qX/NquYuh3SY.HE1qWYXTIqmhCxCKzUQ8w7XKkW',0,'2022-05-18','2022-06-30'),(9,'yapsopso admin','0923977851','$2a$10$Got0iOvtcXuYKLmGAdnX9ujd8N6BTZduqCQlEQUMexOEEG4yHnKEi',1,'2022-06-18','2022-06-18'),(10,'mandeek','0111212222','$2a$10$tcY.1JQhnv37TU6RMrR7o.Ih2u8bK2qy85ETqXVCgbIm8NyrjXj5m',0,'2022-06-18','2022-06-18'),(11,'plplpl','0000212222','$2a$10$Lb3Suong9fhqWOI28eLQd.R5O.oLkSDu/jArj4qcOd3JuGN0w/FPC',0,'2022-06-18','2022-06-18'),(12,'oooo','0000002222','$2a$10$3QVAboTQAF9BjssVXIxEMuLqd.Nl7qmL7UA5goRwreObfertiN0Nm',0,'2022-06-18','2022-06-18'),(13,'poaspaos','0127183798','$2a$10$nwvwQOLUL9Ql.b/9WGL5guDIrQpF/udCyeQKqO3R.c0wkFcXQ7ocC',0,'2022-06-23','2022-06-23'),(14,'scscs','0137183798','$2a$10$5GHS8TcF5Y3zwKcu.X5ap.uxtHusyvk2tyNARQrVyRqgzWEChhBM6',0,'2022-06-23','2022-06-23'),(15,'22 admin','0923972851','$2a$10$gwkoAmfccRCb2bSfWFDcLuwfGpJcfQt1awlEUPv/ZDgmN/9bPXeSK',1,'2022-06-24','2022-06-24'),(16,'mane','0137113798','$2a$10$.wFytH2fAYQkDKSgEO2ciOztw1MuhwCVVuP0wFBE2KpXmqq5CTrwS',0,'2022-06-30','2022-06-30');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-07-19 20:11:43
